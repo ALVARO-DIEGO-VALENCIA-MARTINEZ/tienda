@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tarjeta2.css">
+</head>
+<body>
+    <div class="contenedor_formulario">
+        <form id="producto_formulario">
+          <label for="Nombre_producto">Nombre del Producto</label><br>
+          <input type="text" id="Nombre_producto" class="nombre" placeholder="nombre del producto" required>
+      
+          <br><label for="Descripción_producto">Descripción del Producto</label><br>
+          <textarea id="Descripción_producto" class="descripcion" rows="3" placeholder="Descripción_producto" required></textarea><br>
+      
+          <label for="producto_Precio">Precio</label><br>
+          <input type="number" id="producto_Precio" class="precio" placeholder="precio" required><br>
+      
+          <label for="Imagen_Producto">Imagen de Referencia</label><br>
+          <input type="file" id="Imagen_Producto" class="imagen" accept="image/*" required><br>
+      
+          <button type="submit">Agregar Producto</button><br>
+        </form>
+      </div>
+      
+      <div class="card-container" id="cardContainer"></div>
+      <script src="tarjeta2.js"></script>
+</body>
+</html>
