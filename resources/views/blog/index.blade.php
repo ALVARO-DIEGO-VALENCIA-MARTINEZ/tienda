@@ -21,4 +21,5 @@
     @else
         <p>No hay artículos disponibles.</p>
     @endif
+   
 @endsection

@@ -17,4 +17,5 @@
     @else
         <p>No hay artículos disponibles.</p>
     @endif
+    <a href="{{route('blog.create')}}">Crear nuevo articulo</a>
 @endsection

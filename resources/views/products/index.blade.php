@@ -36,14 +36,20 @@
                     <p>Precio: ${{ number_format($product->price, 2) }}</p>
                     <p>Stock: {{ $product->stock }}</p>
                     <p>Categoría: {{ $product->category->name ?? 'Sin categoría' }}</p>
+                    @auth
+                        
+                   
                     <a href="{{ route('products.show', $product) }}">Ver más</a>
                     <a href="{{ route('products.edit', $product) }}">Editar</a>
+                    
 
                     {{-- Formulario para eliminar el producto --}}
                     <form action="{{ route('products.destroy', $product) }}" method="POST" onsubmit="return confirm('¿Seguro que quieres eliminar este producto?');">
+                       
                         @csrf
                         @method('DELETE')
                         <button type="submit" style="color: red;">Eliminar</button>
+                        @endauth
                     </form>
                 </div>
             @endforeach
